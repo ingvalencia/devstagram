@@ -17,7 +17,7 @@
                 </h1>
                 <nav class="flex gap-2 items-center">
                     <a class="font-bold uppercase text-gray-600 text-sm" href="#">Login</a>
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="/crear-cuenta">Crear cuenta</a>
+                    <a href="{{ route('register')}}" class="font-bold uppercase text-gray-600 text-sm" >Crear cuenta</a>
                 </nav>
             </div>
         </header>
@@ -30,7 +30,7 @@
             @yield('contenido')
         </main>
 
-        <footer class="text-center  p-5 text-gray-500 font-bold text-1xl mb-10">
+        <footer class="mt-10 text-center  p-5 text-gray-500 font-bold text-1xl mb-10">
             Desarrollado por Giovanny Valencia - Todos los derechos reservados
             @php
                 echo date('Y')

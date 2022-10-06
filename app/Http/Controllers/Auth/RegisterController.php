@@ -10,4 +10,15 @@ class RegisterController extends Controller
     public function index () {
         return view('auth.register');
     }
+
+    public function store(Request $request) {
+        //dd($request);
+        //dd($request->get('name'));
+
+        //validaciones con laravel
+        $this->validate($request,[
+            'name' => ['required','max:30'],
+        ]);
+
+    }
 }
