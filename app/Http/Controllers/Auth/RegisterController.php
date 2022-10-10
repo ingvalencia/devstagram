@@ -18,6 +18,10 @@ class RegisterController extends Controller
         //validaciones con laravel
         $this->validate($request,[
             'name' => ['required','max:30'],
+            'user' => ['required','unique:users','min:3','max:30'],
+            'email' => ['required','unique:users','email','max:60'],
+            'password' => ['required',],
+            //'password_confirmation' => ['required',],
         ]);
 
     }
